@@ -60,10 +60,22 @@ const greeter = {
 //COMMIT 3
 
 
+const stringCollector = {
+	collection: [],
+	collect(str) {
+		this.collection.push(str.trim().split('').reverse().join(''));
+	},
+	admireCollection() {
+		for (let i = 0; i < this.collection.length; i++) {
+			console.log(this.collection[i]);
+		}
+	}
+}
 
 
-
-
+stringCollector.collect('michael');
+stringCollector.collect('abbie');
+stringCollector.admireCollection()
 
 
 
