@@ -10,17 +10,19 @@ const tamagotchi = {
 	restedness: 5,
 	health: 10,
 	cry() {
-		console.log('waaaaa');
+		console.log("'waaaaa'");
+		this.foodInTummy--;
+		console.log(this.tamName+" has "+this.foodInTummy+" food in tummy");
 	},
 	puke() {
-		console.log('bleeehhhh :0 ~');
+		console.log(this.tamName+" is sick! 'bleeehhhh :0~'");
 	},
 	yawn() {
-		console.log('yawwwnnnn');
+		console.log(this.tamName+" is tired! 'yawwwnnnn'");
 	}
 }
 
-// tamagotchi.cry();
+tamagotchi.cry();
 
 // tamagotchi.puke();
 
@@ -33,7 +35,7 @@ const tamagotchi = {
 
 //COMMIT 14
 
-
+//COMMIT 15
 
 
 
