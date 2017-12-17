@@ -105,7 +105,30 @@ const atm = {
 //COMMIT 5
 
 
+const leonardo = {
+	named: 'leonardo',
+	color: 'blue',
+	weapon: 'katana',
+	pizzaEaten: false,
+	eatPizza() {
+		if (this.pizzaEaten == true) {
+			console.log(this.named+' has already eaten pizza');
+			this.pizzaEaten = false;
+		}
+		else {
+			console.log(this.named+' is eating pizza');
+			this.pizzaEaten = true;
+		}
+	}
+}
 
+// leonardo.eatPizza();
+// console.log(leonardo.pizzaEaten);
+// leonardo.eatPizza();
+// console.log(leonardo.pizzaEaten);
+
+
+//COMMIT 6
 
 
 
