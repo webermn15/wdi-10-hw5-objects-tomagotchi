@@ -12,13 +12,17 @@ const tamagotchi = {
 	cry() {
 		console.log("'waaaaa'");
 		this.foodInTummy--;
-		console.log(this.tamName+" has "+this.foodInTummy+" food in tummy");
+		console.log(this.tamName+" has "+this.foodInTummy+" food in tummy.");
 	},
 	puke() {
 		console.log(this.tamName+" is sick! 'bleeehhhh :0~'");
+		this.health--;
+		console.log(this.tamName+" has "+this.health+" health.");
 	},
 	yawn() {
 		console.log(this.tamName+" is tired! 'yawwwnnnn'");
+		this.restedness--;
+		console.log(this.tamName+" has "+this.restedness+" restedness.");
 	}
 }
 
@@ -42,9 +46,13 @@ const tamagotchi2 = {
 	},
 	puke() {
 		console.log(this.tamName+" is sick! 'bleeehhhh :0~'");
+		this.health--;
+		console.log(this.tamName+" has "+this.health+" health.");
 	},
 	yawn() {
 		console.log(this.tamName+" is tired! 'yawwwnnnn'");
+		this.restedness--;
+		console.log(this.tamName+" has "+this.restedness+" restedness.");
 	}
 }
 
