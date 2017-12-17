@@ -11,13 +11,21 @@ const tamagotchi = {
 	health: 10,
 	cry() {
 		console.log('waaaaa');
+	},
+	puke() {
+		console.log('bleeehhhh :0 ~');
 	}
 }
 
 // tamagotchi.cry();
 
+// tamagotchi.puke();
+
 
 //COMMIT 12 
+
+
+
 
 
 
