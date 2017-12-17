@@ -14,6 +14,9 @@ const tamagotchi = {
 	},
 	puke() {
 		console.log('bleeehhhh :0 ~');
+	},
+	yawn() {
+		console.log('yawwwnnnn');
 	}
 }
 
@@ -21,10 +24,14 @@ const tamagotchi = {
 
 // tamagotchi.puke();
 
+// tamagotchi.yawn();
+
 
 //COMMIT 12 
 
+//COMMIT 13
 
+//COMMIT 14
 
 
 
