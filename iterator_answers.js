@@ -13,3 +13,11 @@ words.forEach((foo) => {
 //COMMIT 8
 
 
+const moreWords = ["Joe", "Overeats", "Eggs"];
+
+const firstLetter = moreWords.map((str) => {
+	console.log(str);
+	return str.trim().substring(0,1);
+})
+
+console.log(firstLetter);
