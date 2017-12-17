@@ -71,8 +71,15 @@ const player = {
 	feedTamagotchi() {
 		tamagotchi.foodInTummy++;
 		tamagotchi2.foodInTummy++;
+	},
+	medicateTamagotchi(tama) {
+		tama.health++;
 	}
 }
+
+// player.medicateTamagotchi(tamagotchi2);
+
+// console.log(tamagotchi2.health);
 
 // player.feedTamagotchi();
 
@@ -96,7 +103,7 @@ const player = {
 
 //COMMIT 19
 
-
+//COMMIT 20
 
 
 
