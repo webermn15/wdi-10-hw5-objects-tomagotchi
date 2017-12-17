@@ -27,6 +27,28 @@ const tamagotchi = {
 		console.log(this.tamName+" is tired! 'yawwwnnnn'");
 		this.restedness--;
 		console.log(this.tamName+" has "+this.restedness+" restedness.");
+	},
+	//added the timers inside my object
+	hungerTimer() {
+		let hungry = setInterval(() => {
+			this.cry();
+		}, 6000);
+	},
+	sickTimer() {
+		let healthy = setInterval(() => {
+			this.puke();
+		}, 10000);
+	},
+	yawnTimer() {
+		let tired = setInterval(() => {
+			this.yawn();
+		}, 25000);
+	},
+	//added a start method that runs each of the 3 timers
+	start() {
+		this.hungerTimer();
+		this.sickTimer();
+		this.yawnTimer();
 	}
 }
 
@@ -58,6 +80,28 @@ const tamagotchi2 = {
 		console.log(this.tamName+" is tired! 'yawwwnnnn'");
 		this.restedness--;
 		console.log(this.tamName+" has "+this.restedness+" restedness.");
+	},
+	//added the timers inside my object
+	hungerTimer() {
+		let hungry = setInterval(() => {
+			this.cry();
+		}, 6000);
+	},
+	sickTimer() {
+		let healthy = setInterval(() => {
+			this.puke();
+		}, 10000);
+	},
+	yawnTimer() {
+		let tired = setInterval(() => {
+			this.yawn();
+		}, 25000);
+	},
+	//added a start method that runs each of the 3 timers
+	start() {
+		this.hungerTimer();
+		this.sickTimer();
+		this.yawnTimer();
 	}
 }
 
@@ -106,25 +150,25 @@ const player = {
 
 //created a set of timers 
 //hunger timer calls the cry method on tamagotchi 2 every 6 seconds
-const hungerTimer = () => {
-	let hungry = setInterval(() => {
-		tamagotchi2.cry();
-	}, 6000);
-}
+// const hungerTimer = () => {
+// 	let hungry = setInterval(() => {
+// 		this.cry();
+// 	}, 6000);
+// }
 
-//sick timer calls tamagotchi 2 method every 10 seconds
-const sickTimer = () => {
-	let healthy = setInterval(() => {
-		tamagotchi2.puke();
-	}, 10000);
-}
+// //sick timer calls tamagotchi 2 method every 10 seconds
+// const sickTimer = () => {
+// 	let healthy = setInterval(() => {
+// 		this.puke();
+// 	}, 10000);
+// }
 
-//yawn timer runs the tamagotchi 2 method yawn every 25 seconds
-const yawnTimer = () => {
-	let tired = setInterval(() => {
-		tamagotchi2.yawn();
-	}, 25000);
-}
+// //yawn timer runs the tamagotchi 2 method yawn every 25 seconds
+// const yawnTimer = () => {
+// 	let tired = setInterval(() => {
+// 		this.yawn();
+// 	}, 25000);
+// }
 
 
 //COMMIT 18
