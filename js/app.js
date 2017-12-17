@@ -32,9 +32,76 @@ const myInformation = {
 	}
 }
 
-myInformation.birthday();
+// myInformation.birthday();
 
-myInformation.changeName('rumpelstiltskin');
+// myInformation.changeName('rumpelstiltskin');
 
-console.log(myInformation.statement());
+// console.log(myInformation.statement());
+
+
+//COMMIT 2
+
+
+const greeter = {
+	hello(name) {
+		return 'what\'s up '+name;
+	},
+	goodybe(name) {
+		return 'later '+name;
+	},
+	whoAreYou(name) {
+		return 'oh right, '+name+', how could i forget';
+	}
+}
+
+// console.log(greeter.hello('dan'),greeter.goodybe('dan'),greeter.whoAreYou('dan'));
+
+
+//COMMIT 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
