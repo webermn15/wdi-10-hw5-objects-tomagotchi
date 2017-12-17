@@ -20,4 +20,16 @@ const firstLetter = moreWords.map((str) => {
 	return str.trim().substring(0,1);
 })
 
-console.log(firstLetter);
+// console.log(firstLetter);
+
+
+//COMMIT 9
+
+
+const arr = [8, 8, 8, 8, 8, 8, 8, 8];
+
+let sumOfParts = arr.reduce((prev, curr) => {
+	return prev + curr;
+});
+
+// console.log(sumOfParts);
