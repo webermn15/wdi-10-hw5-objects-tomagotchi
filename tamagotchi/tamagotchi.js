@@ -22,12 +22,37 @@ const tamagotchi = {
 	}
 }
 
-tamagotchi.cry();
+// tamagotchi.cry();
 
 // tamagotchi.puke();
 
 // tamagotchi.yawn();
 
+
+const tamagotchi2 = {
+	tamName: 'ronald',
+	creatureType: 'cat',
+	foodInTummy: 10,
+	restedness: 10,
+	health: 8,
+	cry() {
+		console.log("'waaaaa'");
+		this.foodInTummy--;
+		console.log(this.tamName+" has "+this.foodInTummy+" food in tummy");
+	},
+	puke() {
+		console.log(this.tamName+" is sick! 'bleeehhhh :0~'");
+	},
+	yawn() {
+		console.log(this.tamName+" is tired! 'yawwwnnnn'");
+	}
+}
+
+// tamagotchi2.cry();
+
+// tamagotchi2.puke();
+
+// tamagotchi2.yawn();
 
 //COMMIT 12 
 
@@ -37,7 +62,7 @@ tamagotchi.cry();
 
 //COMMIT 15
 
-
+//COMMIT 16
 
 
 
