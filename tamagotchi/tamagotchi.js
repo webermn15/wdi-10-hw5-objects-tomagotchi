@@ -62,6 +62,16 @@ const tamagotchi2 = {
 
 // tamagotchi2.yawn();
 
+
+const player = {
+	playerName: 'michael',
+	sayName() {
+		console.log("Hi, my name is "+this.playerName);
+	}
+}
+
+// player.sayName();
+
 //COMMIT 12 
 
 //COMMIT 13
@@ -72,7 +82,7 @@ const tamagotchi2 = {
 
 //COMMIT 16
 
-
+//COMMIT 17
 
 
 
