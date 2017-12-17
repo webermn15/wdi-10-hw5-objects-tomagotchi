@@ -74,8 +74,15 @@ const player = {
 	},
 	medicateTamagotchi(tama) {
 		tama.health++;
+	},
+	knockOutTamagotchi(tama) {
+		tama.restedness++;
 	}
 }
+
+// player.knockOutTamagotchi(tamagotchi2);
+
+// console.log(tamagotchi2.restedness);
 
 // player.medicateTamagotchi(tamagotchi2);
 
@@ -104,6 +111,8 @@ const player = {
 //COMMIT 19
 
 //COMMIT 20
+
+//COMMIT 21
 
 
 
