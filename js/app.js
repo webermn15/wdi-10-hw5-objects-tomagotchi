@@ -131,7 +131,39 @@ const leonardo = {
 //COMMIT 6
 
 
+const calculator = {
+	output: 0,
+	multiply(num1, num2) {
+		let multiplied = num1 * num2;
+		this.output = multiplied;
+		console.log(this.output);
+	},
+	divide(num1, num2) {
+		let divided = num1 / num2;
+		this.output = divided;
+		console.log(this.output);
+	},
+	add(num1,num2) {
+		let added = num1 + num2;
+		this.output = added;
+		console.log(this.output);
+	},
+	subtract(num1,num2) {
+		let subtracted = num1 + num2;
+		this.output = subtracted;
+		console.log(this.output);
+	}
+}
 
+// calculator.multiply(10, 2);
+// calculator.divide(10, 2);
+// calculator.multiply(-2, 8);
+// calculator.divide(-2, 8);
+// calculator.multiply(2, 2);
+// calculator.divide(2,2);
+
+
+//COMMIT 7
 
 
 
