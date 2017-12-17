@@ -67,8 +67,16 @@ const player = {
 	playerName: 'michael',
 	sayName() {
 		console.log("Hi, my name is "+this.playerName);
+	},
+	feedTamagotchi() {
+		tamagotchi.foodInTummy++;
+		tamagotchi2.foodInTummy++;
 	}
 }
+
+// player.feedTamagotchi();
+
+// console.log(tamagotchi2.foodInTummy, tamagotchi.foodInTummy);
 
 // player.sayName();
 
@@ -84,6 +92,9 @@ const player = {
 
 //COMMIT 17
 
+//COMMIT 18
+
+//COMMIT 19
 
 
 
