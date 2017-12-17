@@ -73,9 +73,36 @@ const stringCollector = {
 }
 
 
-stringCollector.collect('michael');
-stringCollector.collect('abbie');
-stringCollector.admireCollection()
+// stringCollector.collect('michael');
+// stringCollector.collect('abbie');
+// stringCollector.admireCollection();
+
+
+
+//COMMIT 4
+
+
+
+const atm = {
+	totalCash: 190,
+	dispenseTwenties(num) {
+		let cashOut = num * 20;
+		if (cashOut <= this.totalCash) {
+			this.totalCash -= cashOut;
+			return cashOut;
+		}
+		else {
+			return null;
+		}
+	}
+}
+
+
+// atm.dispenseTwenties(7);
+// console.log(atm.totalCash);
+
+
+//COMMIT 5
 
 
 
