@@ -206,9 +206,11 @@
 
 // MADE A COPY OF THE TAMAGOTCHI OBJECT AND PLAYER OBJECT FOR USE IN ITERFACING WITH CSS/HTML
 
+
+//wrapped all of the objects and methods in one big method that contains the whole game
 const tamaGame = () => {
 
-	//PROPERTIES
+	//PROPERTIES - declared all nodes to variables for access later
 
 	//status alert divs
 	let cryAlert = document.getElementById('crying');
@@ -227,17 +229,17 @@ const tamaGame = () => {
 		foodInTummy: 10,
 		restedness: 10,
 		health: 10,
-		//cry method decrements the food in tummy property and logs the new value 
+		//cry method decrements the food in tummy property and logs the new value in the cry div
 		cry() {
 			this.foodInTummy--;
 			cryAlert.innerText = this.tamName+" is hungry! He has "+this.foodInTummy+" food in tummy.";
 		},
-		//puke method decrements health property and logs new value
+		//puke method decrements health property and logs new value in the puke div
 		puke() {
 			this.health--;
 			pukeAlert.innerText = this.tamName+" is sick! 'bleeehhhh :0~' He has "+this.health+" health.";
 		},
-		//yawn method decrements the restedness property and logs new value
+		//yawn method decrements the restedness property and logs new value in the yawn alert div
 		yawn() {
 			this.restedness--;
 			yawnAlert.innerText = this.tamName+" is tired! 'yawwwnnnn' He has "+this.restedness+" restedness.";
@@ -272,36 +274,37 @@ const tamaGame = () => {
 		sayName() {
 			console.log("Hi, my name is "+this.playerName);
 		},
-		// increments food in tummy for each tamagotchi
+		// increments food in tummy for each tamagotchi and logs new value in the cry div
 		feedTamagotchi() {
 			tamagotchi.foodInTummy++;
 			cryAlert.innerText = tamagotchi.tamName+" now has "+tamagotchi.foodInTummy+" food.";
 		},
-		//increment the health of tamagotchi object 
+		//increment the health of tamagotchi object and log new value in the puke div
 		medicateTamagotchi() {
 			tamagotchi.health++;
 			pukeAlert.innerText = tamagotchi.tamName+" now has "+tamagotchi.health+" health.";
 		},
-		//increments the restedness tamagotchi object 
-
+		//increments the restedness tamagotchi object and logs new value in yawn div
 		knockOutTamagotchi() {
 			tamagotchi.restedness++;
 			yawnAlert.innerText = tamagotchi.tamName+" now has "+tamagotchi.restedness+" restedness.";
 		}
 	}
 
+
+	//a function that binds the 'click' even listener to all 3 of the buttons on the page
 	const bindClicks = () => {
 		feedButton.addEventListener('click', player.feedTamagotchi);
 		medicateButton.addEventListener('click', player.medicateTamagotchi);
 		sedateButton.addEventListener('click', player.knockOutTamagotchi);
 	}
 
-
+	//runs the start method and binds clicks on load so the game functions without having to initiate it
 	bindClicks();
 	tamagotchi.start();
 }
 
-
+//starts the game on load
 tamaGame();
 
 
