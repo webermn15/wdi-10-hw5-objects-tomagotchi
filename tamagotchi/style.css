@@ -1,0 +1,43 @@
+* {
+	border: 1px solid black;
+}
+body {
+	background: peachpuff;
+	margin: 0 auto;
+	padding: 0px;
+	width: 60%;
+}
+.big-container {
+	margin: 0 auto;
+	width: auto;
+	/*border: 1px solid black;*/
+}
+img {
+	margin: 0 auto;
+	width: auto;
+	display: block;
+}
+
+.update-container {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	height: 100px;
+	width: 600px;
+}
+.update-box {
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+}
+form {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	width: 250px;
+}
+button {
+	text-align: center;
+	background: lightseagreen;
+	margin: 0 auto;
+}
