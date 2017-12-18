@@ -5,10 +5,18 @@ body {
 	font-family: 'Press Start 2P', cursive;
 	font-size: 14px;
 	line-height: 1.3;
+	text-align: center;
 	background: peachpuff;
 	margin: 0 auto;
 	padding: 0px;
 	width: 60%;
+}
+#start-button {
+	display: block;
+	margin: 20px;
+	font-size: 48px;
+	text-decoration: none;
+	color: inherit;
 }
 .big-container {
 	margin: 0 auto;

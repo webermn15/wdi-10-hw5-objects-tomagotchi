@@ -221,8 +221,10 @@ const tamaGame = () => {
 	let feedButton = document.getElementById('feed');
 	let medicateButton = document.getElementById('medicate');
 	let sedateButton = document.getElementById('sedate');
+	let startButton = document.getElementById('start-button');
 
 
+	//tamagotchi object
 	const tamagotchi = {
 		tamName: 'James',
 		creatureType: 'blob',
@@ -269,10 +271,17 @@ const tamaGame = () => {
 				}
 			}, 25000);
 		},
+		//end of game prompt for when your tamagotchi dies. alerts the player of their failures and prompts them to attempt again
 		tryAgain() {
 			alert('Your Tamagotchi has died! The feds are on their way to arrest you for abuse.');
 			let tryAgain = confirm('Try again, murderer?');
 			tryAgain ? this.start() : alert('later homeboy. you can\'t run forever.');
+		},
+		//clears all alert divs
+		clearAlerts() {
+			cryAlert.innerText = '';
+			pukeAlert.innerText = '';
+			yawnAlert.innerText = '';
 		},
 		//added a start method that runs each of the 3 timers
 		start() {
@@ -281,12 +290,14 @@ const tamaGame = () => {
 			this.foodInTummy = 10;
 			this.restedness = 10;
 			this.health = 10;
-			this.hungerTimer();
-			this.sickTimer();
-			this.yawnTimer();
+			tamagotchi.hungerTimer();
+			tamagotchi.sickTimer();
+			tamagotchi.yawnTimer();
 		}
 	}
 
+
+	//player object
 	const player = {
 		playerName: 'michael',
 		//logs player nam
@@ -316,11 +327,12 @@ const tamaGame = () => {
 		feedButton.addEventListener('click', player.feedTamagotchi);
 		medicateButton.addEventListener('click', player.medicateTamagotchi);
 		sedateButton.addEventListener('click', player.knockOutTamagotchi);
+		startButton.addEventListener('click', tamagotchi.start);
 	}
 
 	//runs the start method and binds clicks on load so the game functions without having to initiate it
 	bindClicks();
-	tamagotchi.start();
+	// tamagotchi.start();
 }
 
 //starts the game on load
