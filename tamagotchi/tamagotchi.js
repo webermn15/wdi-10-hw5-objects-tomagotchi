@@ -224,7 +224,7 @@ const tamaGame = () => {
 
 
 	const tamagotchi = {
-		tamName: 'james',
+		tamName: 'James',
 		creatureType: 'blob',
 		foodInTummy: 10,
 		restedness: 10,
@@ -248,20 +248,39 @@ const tamaGame = () => {
 		hungerTimer() {
 			let hungry = setInterval(() => {
 				this.cry();
+				if (this.foodInTummy == 0) {
+					this.tryAgain();
+				}
 			}, 6000);
 		},
 		sickTimer() {
 			let healthy = setInterval(() => {
 				this.puke();
+				if (this.health == 0) {
+					this.tryAgain();
+				}
 			}, 10000);
 		},
 		yawnTimer() {
 			let tired = setInterval(() => {
 				this.yawn();
+				if (this.restedness == 0) {
+					this.tryAgain();
+				}
 			}, 25000);
+		},
+		tryAgain() {
+			alert('Your Tamagotchi has died! The feds are on their way to arrest you for abuse.');
+			let tryAgain = confirm('Try again, murderer?');
+			tryAgain ? this.start() : alert('later homeboy. you can\'t run forever.');
 		},
 		//added a start method that runs each of the 3 timers
 		start() {
+			let petName = prompt('What is your Tamagotchi\'s name?');
+			this.tamName = petName;
+			this.foodInTummy = 10;
+			this.restedness = 10;
+			this.health = 10;
 			this.hungerTimer();
 			this.sickTimer();
 			this.yawnTimer();
