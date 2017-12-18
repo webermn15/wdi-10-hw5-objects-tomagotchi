@@ -2,6 +2,7 @@
 
 //Iterator answers
 
+//forEach used to affect every index in an array
 const words = ["Ho", "Chi", "Minh", "City", "was", "once", "known", "as", "Prey", "Nokor"];
 
 words.forEach((foo) => {
@@ -12,7 +13,7 @@ words.forEach((foo) => {
 
 //COMMIT 8
 
-
+//used map in conjunction with array methods trim and substring to return a new array with only the first letters of each array index
 const moreWords = ["Joe", "Overeats", "Eggs"];
 
 const firstLetter = moreWords.map((str) => {
@@ -25,7 +26,7 @@ const firstLetter = moreWords.map((str) => {
 
 //COMMIT 9
 
-
+//used reduce with addition to add all elements of the array together
 const arr = [8, 8, 8, 8, 8, 8, 8, 8];
 
 let sumOfParts = arr.reduce((prev, curr) => {
@@ -56,7 +57,7 @@ const sheepShearers = [
     }
 ];
 
-
+//chained methods to add sheepcount- map lists all sheepcount property values in an array and reduce adds them together
 const justSheep = sheepShearers.map((foo) => {
 	return foo.sheepCount;
 }).reduce((prev, curr) => {
@@ -69,6 +70,12 @@ const justSheep = sheepShearers.map((foo) => {
 
 
 //COMMIT 11
+
+
+
+
+
+//ITERATOR ANSWERS CONTINUED
 
 
 
