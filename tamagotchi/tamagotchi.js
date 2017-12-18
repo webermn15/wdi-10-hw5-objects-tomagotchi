@@ -206,85 +206,103 @@
 
 // MADE A COPY OF THE TAMAGOTCHI OBJECT AND PLAYER OBJECT FOR USE IN ITERFACING WITH CSS/HTML
 
+const tamaGame = () => {
+
+	//PROPERTIES
+
+	//status alert divs
+	let cryAlert = document.getElementById('crying');
+	let pukeAlert = document.getElementById('puking');
+	let yawnAlert = document.getElementById('yawning');
+
+	//buttons
+	let feedButton = document.getElementById('feed');
+	let medicateButton = document.getElementById('medicate');
+	let sedateButton = document.getElementById('sedate');
 
 
-//PROPERTIES
-
-let cryAlert = document.getElementById('crying');
-let pukeAlert = document.getElementById('puking');
-let yawnAlert = document.getElementById('yawning');
-
-
-const tamagotchi = {
-	tamName: 'james',
-	creatureType: 'dog',
-	foodInTummy: 10,
-	restedness: 10,
-	health: 10,
-	//cry method decrements the food in tummy property and logs the new value 
-	cry() {
-		cryAlert.innerText = this.tamName+" is hungry! He has "+this.foodInTummy+" food in tummy.";
-		this.foodInTummy--;
-	},
-	//puke method decrements health property and logs new value
-	puke() {
-		pukeAlert.innerText = this.tamName+" is sick! 'bleeehhhh :0~' He has "+this.health+" health.";
-		this.health--;
-	},
-	//yawn method decrements the restedness property and logs new value
-	yawn() {
-		yawnAlert.innerText = this.tamName+" is tired! 'yawwwnnnn' He has "+this.restedness+" restedness.";
-		this.restedness--;
-	},
-	//added the timers inside my object
-	hungerTimer() {
-		let hungry = setInterval(() => {
-			this.cry();
-		}, 6000);
-	},
-	sickTimer() {
-		let healthy = setInterval(() => {
-			this.puke();
-		}, 10000);
-	},
-	yawnTimer() {
-		let tired = setInterval(() => {
-			this.yawn();
-		}, 25000);
-	},
-	//added a start method that runs each of the 3 timers
-	start() {
-		this.hungerTimer();
-		this.sickTimer();
-		this.yawnTimer();
+	const tamagotchi = {
+		tamName: 'james',
+		creatureType: 'blob',
+		foodInTummy: 10,
+		restedness: 10,
+		health: 10,
+		//cry method decrements the food in tummy property and logs the new value 
+		cry() {
+			this.foodInTummy--;
+			cryAlert.innerText = this.tamName+" is hungry! He has "+this.foodInTummy+" food in tummy.";
+		},
+		//puke method decrements health property and logs new value
+		puke() {
+			this.health--;
+			pukeAlert.innerText = this.tamName+" is sick! 'bleeehhhh :0~' He has "+this.health+" health.";
+		},
+		//yawn method decrements the restedness property and logs new value
+		yawn() {
+			this.restedness--;
+			yawnAlert.innerText = this.tamName+" is tired! 'yawwwnnnn' He has "+this.restedness+" restedness.";
+		},
+		//added the timers inside my object
+		hungerTimer() {
+			let hungry = setInterval(() => {
+				this.cry();
+			}, 6000);
+		},
+		sickTimer() {
+			let healthy = setInterval(() => {
+				this.puke();
+			}, 10000);
+		},
+		yawnTimer() {
+			let tired = setInterval(() => {
+				this.yawn();
+			}, 25000);
+		},
+		//added a start method that runs each of the 3 timers
+		start() {
+			this.hungerTimer();
+			this.sickTimer();
+			this.yawnTimer();
+		}
 	}
+
+	const player = {
+		playerName: 'michael',
+		//logs player nam
+		sayName() {
+			console.log("Hi, my name is "+this.playerName);
+		},
+		// increments food in tummy for each tamagotchi
+		feedTamagotchi() {
+			tamagotchi.foodInTummy++;
+			cryAlert.innerText = tamagotchi.tamName+" now has "+tamagotchi.foodInTummy+" food.";
+		},
+		//increment the health of tamagotchi object 
+		medicateTamagotchi() {
+			tamagotchi.health++;
+			pukeAlert.innerText = tamagotchi.tamName+" now has "+tamagotchi.health+" health.";
+		},
+		//increments the restedness tamagotchi object 
+
+		knockOutTamagotchi() {
+			tamagotchi.restedness++;
+			yawnAlert.innerText = tamagotchi.tamName+" now has "+tamagotchi.restedness+" restedness.";
+		}
+	}
+
+	const bindClicks = () => {
+		feedButton.addEventListener('click', player.feedTamagotchi);
+		medicateButton.addEventListener('click', player.medicateTamagotchi);
+		sedateButton.addEventListener('click', player.knockOutTamagotchi);
+	}
+
+
+	bindClicks();
+	tamagotchi.start();
 }
 
-const player = {
-	playerName: 'michael',
-	//logs player nam
-	sayName() {
-		console.log("Hi, my name is "+this.playerName);
-	},
-	// increments food in tummy for each tamagotchi
-	feedTamagotchi() {
-		tamagotchi.foodInTummy++;
-		tamagotchi2.foodInTummy++;
-	},
-	//takes one parameter, the name of the tamagotchi object that you want to increment the health of 
-	medicateTamagotchi(tama) {
-		tama.health++;
-	},
-	//accepts parameter of the tamagotchi object you want to increment the restedness of
 
-	knockOutTamagotchi(tama) {
-		tama.restedness++;
-	}
-}
-
-
-
-
+tamaGame();
 
 
 
