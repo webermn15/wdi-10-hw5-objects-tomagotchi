@@ -275,7 +275,7 @@ const tamaGame = () => {
 		tryAgain() {
 			alert('Your Tamagotchi has died! The feds are on their way to arrest you for abuse.');
 			let tryAgain = confirm('Try again, murderer?');
-			tryAgain ? this.start() : alert('later homeboy. you can\'t run forever.');
+			tryAgain ? this.start() : alert('later homeskillet. you can\'t run forever.');
 		},
 		//clears all alert divs
 		clearAlerts() {

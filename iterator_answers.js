@@ -73,11 +73,13 @@ const justSheep = sheepShearers.map((foo) => {
 
 
 
-
-
 //ITERATOR ANSWERS CONTINUED
 
+//forEach used 
 
+const gizmo = {start: 10, end: 6, location: "remote", type: "wdi"};
+
+gizmo.forEach()
 
 
 
